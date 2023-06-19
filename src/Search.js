@@ -9,7 +9,7 @@ function Search() {
   const [ingredients, setIngredients] = useState('');
   const [recipes, setRecipes] = useState([]);
   const API_KEY = process.env.REACT_APP_API_KEY;
-
+  
   const searchRecipes = async () => {
     try {
       const ingredientsList = ingredients.split(',').map(ingredient => encodeURIComponent(ingredient.trim()));
