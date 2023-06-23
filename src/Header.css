@@ -1,0 +1,22 @@
+.header-footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo, .clickable-images {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+  
+  .clickable-images a:not(:last-child) {
+    margin-right: 20px;
+  }

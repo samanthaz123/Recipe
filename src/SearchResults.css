@@ -1,0 +1,33 @@
+.recipes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+.recipe-link {
+  text-decoration: none;
+  color: rgb(53, 117, 34);
+  width: 45%;
+  margin-top: 20px;
+}
+
+.recipe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.recipe-image {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+}
+
+.recipe-title {
+  margin-top: 20px;
+}

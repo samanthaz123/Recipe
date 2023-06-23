@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './RecipeDetails.css';
 
 function RecipeDetails() {
   const { id } = useParams();
@@ -7,23 +8,21 @@ function RecipeDetails() {
   const API_KEY = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
-    const fetchRecipe = async () => {
-      const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`);
-      const data = await response.json();
-      setRecipe(data);
-    };
+    fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`)
+      .then(response => response.json())
+      .then(data => setRecipe(data));
+  }, [id, API_KEY]);
 
-    fetchRecipe();
-  }, [id]);
+  if (!recipe) {
+    return <div>Loading...</div>;
+  }
 
-  return recipe ? (
-    <div>
-      <h1>{recipe.title}</h1>
+  return (
+    <div className="container">
+      <div className="title">{recipe.title}</div>
       <img src={recipe.image} alt={recipe.title} />
-      <p>{recipe.instructions}</p>
+      <div className="instructions">{recipe.instructions}</div>
     </div>
-  ) : (
-    <div>Loading...</div>
   );
 }
 
