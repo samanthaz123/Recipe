@@ -12,7 +12,7 @@ function Header() {
         <img src={logoImage} alt="Logo" className="header-image" />
       </div>
       <div className="clickable-images">
-        <a href="#"><img src={GitHub} alt="GitHub Logo" className="header-image" /></a>
+        <a href="https://github.com/samanthaz123?tab=repositories"><img src={GitHub} alt="GitHub Logo" className="header-image" /></a>
         <a href="#"><img src={homeLogo} alt="Home Logo" className="header-image" /></a>
       </div>
     </header>
