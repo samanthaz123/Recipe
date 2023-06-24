@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Home.css';
+import styles from './Home.css';
 
 
 function Home() {
@@ -12,7 +12,8 @@ function Home() {
   };
 
   return (
-    <div className="container">
+    <div className="body">
+      <div className="container">
       <div className="content">
         <div className="black-square">
           <h2>Recipe Generator</h2>
@@ -24,7 +25,8 @@ function Home() {
         </div>
       </div>
     </div>
+
+    </div>
   );
 }
-
 export default Home;

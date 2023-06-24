@@ -9,11 +9,11 @@ function Header() {
   return (
     <header className="header-footer">
       <div className="logo">
-        <img src={logoImage} alt="Logo" className="header-image" />
+        <a href="https://main.dncigle06wfh8.amplifyapp.com/"><img src={logoImage} alt="Logo" className="header-image" /></a>
       </div>
       <div className="clickable-images">
         <a href="https://github.com/samanthaz123?tab=repositories"><img src={GitHub} alt="GitHub Logo" className="header-image" /></a>
-        <a href="#"><img src={homeLogo} alt="Home Logo" className="header-image" /></a>
+        <a href="https://main.d1dgu90x1670ap.amplifyapp.com/"><img src={homeLogo} alt="Home Logo" className="header-image" /></a>
       </div>
     </header>
   );
