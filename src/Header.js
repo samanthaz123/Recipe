@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from './images/sz_logo.jpg';
+import logoImage from './images/sz_logo.png';
 import GitHub from './images/github_logo.png';
 import homeLogo from './images/homepage_logo.png';
 import './Header.css';
