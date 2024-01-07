@@ -2,6 +2,17 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './RecipeDetails.css';
 
+function formatInstructions(instructions) {
+  const tempDiv = document.createElement('div');
+  tempDiv.innerHTML = instructions;
+  const textContent = tempDiv.textContent || tempDiv.innerText || "";
+
+  const correctedText = textContent.replace(/\.(\S)/g, '. $1');
+
+  return correctedText;
+}
+
+
 function RecipeDetails() {
   const { id } = useParams();
   const [recipe, setRecipe] = useState(null);
@@ -21,7 +32,7 @@ function RecipeDetails() {
     <div className="container">
       <div className="title">{recipe.title}</div>
       <img src={recipe.image} alt={recipe.title} />
-      <div className="instructions">{recipe.instructions}</div>
+      <div className="instructions" dangerouslySetInnerHTML={{ __html: formatInstructions(recipe.instructions) }}></div>
     </div>
   );
 }

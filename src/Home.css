@@ -9,10 +9,11 @@
   background-size: cover;
 }
 
-.container {
+.content {
   display: flex;
-  flex-direction: column;
-  height: calc(100vh - 120px);
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 105px);
 }
 
 .black-square {
@@ -20,7 +21,7 @@
   color: white;
   padding: 20px;
   text-align: center;
-  width: 305px;
+  width: 250px;
   height: 250px;
   overflow: auto;
 }

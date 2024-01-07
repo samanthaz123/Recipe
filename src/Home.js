@@ -13,19 +13,16 @@ function Home() {
 
   return (
     <div className="body">
-      <div className="container">
       <div className="content">
         <div className="black-square">
           <h2>Recipe Generator</h2>
-          <p>Enter your ingredients below to find matching recipes.</p>
+          <p>Enter ingredients separated by commas to find recipes.</p>
           <form onSubmit={e => { e.preventDefault(); searchRecipes(); }}>
-            <input className="search-input" type="text" value={ingredients} onChange={e => setIngredients(e.target.value)} placeholder="Enter ingredients, separated by commas" />
+            <input className="search-input" type="text" value={ingredients} onChange={e => setIngredients(e.target.value)} placeholder="" />
             <button className="auth-button" type="submit">Search</button>
           </form>
         </div>
       </div>
-    </div>
-
     </div>
   );
 }

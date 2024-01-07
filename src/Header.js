@@ -9,7 +9,7 @@ function Header() {
   return (
     <header className="header-footer">
       <div className="logo">
-        <a href="https://main.dncigle06wfh8.amplifyapp.com/"><img src={logoImage} alt="Logo" className="header-image" /></a>
+       <img src={logoImage} alt="Logo" className="header-image" />
       </div>
       <div className="clickable-images">
         <a href="https://github.com/samanthaz123?tab=repositories"><img src={GitHub} alt="GitHub Logo" className="header-image" /></a>
